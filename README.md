@@ -5,8 +5,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Article related: 
 
------
-
 # Setup 
 > cd plugins/plugin-a
 
