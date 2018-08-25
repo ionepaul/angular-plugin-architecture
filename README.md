@@ -11,6 +11,10 @@ This project represents an example of how to achieve a plugin architecture in an
 
 > npm run build
 
+------
+
 > cd core-app 
+
 > npm install
+
 > npm start
