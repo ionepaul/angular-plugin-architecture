@@ -27,6 +27,7 @@ export default [{
    ],
    external: [
      '@angular/core',
-     '@angular/common'
+     '@angular/common',
+     '@angular/forms'
    ]
 }]

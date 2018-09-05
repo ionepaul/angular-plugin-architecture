@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'plugin-a-component',
-  template: `<h3>Hi, I am the Plugin A component.</h3>`
+  templateUrl: './plugin-a.component.html'
 })
 export class PluginAComponent {
+  public myForm: NgForm;
+
   constructor() { }
 }

@@ -1,8 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common'], factory) :
-	(factory((global['plugin-a'] = {}),global.core,global.common));
-}(this, (function (exports,core,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/forms')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common', '@angular/forms'], factory) :
+	(factory((global['plugin-a'] = {}),global.core,global.common,global.forms));
+}(this, (function (exports,core,common,forms) { 'use strict';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -45,7 +45,7 @@ var PluginAComponent = /** @class */ (function () {
     PluginAComponent = __decorate([
         core.Component({
             selector: 'plugin-a-component',
-            template: "<h3>Hi, I am the Plugin A component.</h3>"
+            template: "<form #myForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"name\">Name</label>\n      <input type=\"text\" class=\"form-control\" id=\"name\" required>\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"alterEgo\">Alter Ego</label>\n      <input type=\"text\" class=\"form-control\" id=\"alterEgo\">\n    </div>\n\n    <button type=\"submit\" class=\"btn btn-success\">Submit</button>\n\n</form>"
         }),
         __metadata("design:paramtypes", [])
     ], PluginAComponent);
@@ -58,7 +58,8 @@ var PluginAModule = /** @class */ (function () {
     PluginAModule = __decorate([
         core.NgModule({
             imports: [
-                common.CommonModule
+                common.CommonModule,
+                forms.FormsModule
             ],
             declarations: [PluginAComponent],
             entryComponents: [PluginAComponent],
