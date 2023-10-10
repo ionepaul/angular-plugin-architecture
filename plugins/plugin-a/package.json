@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@angular/common": "5.2.0",
-    "@angular/core": "5.2.0",
+    "@angular/core": "10.2.5",
     "@angular/forms": "^6.1.6",
     "rollup": "0.55.1",
     "rxjs": "5.5.6"
